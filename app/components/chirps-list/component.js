@@ -1,7 +1,6 @@
 import Ember from 'ember';
 
-
-
 export default Ember.Component.extend({
-  classNames: ['card', 'profile-glance']
+  tagName: 'ul',
+  classNames: ['card']
 });
