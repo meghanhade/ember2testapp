@@ -1,15 +1,23 @@
 <h1>My profile</h1>
 
-{{#link-to "user.index"}}
-  Chirps
-{{/link-to}}
 
-{{#link-to "user.following"}}
-  Following
-{{/link-to}}
 
-{{#link-to "user.followers"}}
-  Followers
-{{/link-to}}
+<!-- The profile stats -->
+<ul class="profile-stats">
+  {{#link-to "user.index" tagName="li"}}
+    <h4>Chirps</h4>
+    <p>{{model.user.numberOfChirps}}</p>
+  {{/link-to}}
+
+  {{#link-to "user.following" tagName="li"}}
+    <h4>Following</h4>
+    <p>{{model.user.numberOfFollowing}}</p>
+  {{/link-to}}
+
+  {{#link-to "user.followers" tagName="li"}}
+    <h4>Followers</h4>
+    <p>{{model.user.numberOfFollowers}}</p>
+  {{/link-to}}
+</ul>
 
 {{outlet}}

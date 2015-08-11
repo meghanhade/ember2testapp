@@ -28,13 +28,13 @@
 <div class="page-container user-page">
 
   <aside>
-    <h1>t4t5</h1>
-    <p class="description">I like open-source software!</p>
-    <p class="joined">Joined 5 minutes ago</p>
-  </aside>
+  <h1>{{model.user.username}}</h1>
+  <p class="description">{{model.user.aboutMe}}</p>
+  <p class="joined">Joined {{model.user.joinedAt}}</p>
+</aside>
 	
   <main>
-  	{{outlet}}
+  	{{chirps-list chirps=model}}
   </main>
 
 </div>
